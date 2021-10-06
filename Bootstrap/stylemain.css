@@ -1,0 +1,30 @@
+.img-fluid
+{
+    height: 50px;
+    width: 90%;
+}
+.navbar-collapse
+{
+    margin-left: 17%;
+}
+.nav-icons
+{
+    margin-left: 30%;
+}
+.headerset
+{
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.headerset h1
+{
+    text-shadow: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+    font-weight: bold;
+}
+.headerset h4{font-size: 16px; color: rgb(255, 255, 255);}
+.btn{margin-bottom: 10%;}
+.rowsetting{margin: 14px 0px;}
+.feature{display: inline-flex;}
+.feature a{text-decoration: none;}

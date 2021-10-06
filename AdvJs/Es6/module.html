@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="add()">Add</button>
+        <script>
+            import{add,sub,mul,div} from './module2.js';
+
+            document.getElementById('add'.addEventlistener('click', function()
+            {
+                var a=parseInt(prompt("Enter First Number"))
+                var b=parseInt(prompt("Enter Second Number"))
+                document.write(add(a,b));
+            }));
+
+            document.getElementById('sub'.addEventlistener('click', function()
+            {
+                var a=parseInt(prompt("Enter First Number"))
+                var b=parseInt(prompt("Enter Second Number"))
+                document.write(sub(a,b));
+            }));
+
+            document.getElementById('mul'.addEventlistener('click', function()
+            {
+                var a=parseInt(prompt("Enter First Number"))
+                var b=parseInt(prompt("Enter Second Number"))
+                document.write(mul(a,b));
+            }));
+
+            document.getElementById('div'.addEventlistener('click', function()
+            {
+                var a=parseInt(prompt("Enter First Number"))
+                var b=parseInt(prompt("Enter Second Number"))
+                document.write(div(a,b));
+            }));
+
+        </script>
+    </body>
+</html>

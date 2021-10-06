@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adding Tasks using fnc</title>
+        <script>
+            function fncadd() 
+            {
+                var ul=document.getElementById("list");
+                var node=document.getElementById("field").value;
+                var li=document.createElement("li");
+                li.appendChild(document.createTextNode(node));
+                ul.appendChild(li);
+            }     
+            function fncdel() 
+            {
+            }            
+        </script>
+    </head>
+    <body>
+        <input type="text" id="field"><br><br>
+        <input type="button" onclick="fncadd()" value="add">
+        <input type="button" onclick="fncdel()" value="delete"><br>
+        <h3>To do List</h3>
+        <ul id="list">
+
+        </ul>
+    </body>
+</html>

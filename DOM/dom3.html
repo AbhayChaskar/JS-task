@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Dom 3 create element child</title>
+    </head>
+    <body>
+        <h4>Existing List</h4>
+        <ul id="menu">
+            <li>Home</li>
+        </ul>
+        <script>
+            var li1=document.createElement('li');
+            var li2=document.createElement('li');
+            li1.textContent="Product";
+            li2.textContent="Gallary";
+            document.getElementById("menu").appendChild(li1);
+            document.getElementById("menu").appendChild(li2);
+        </script>
+    </body>
+</html>

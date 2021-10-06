@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Dom 5 validation expression</title>
+        <script>
+            function val() 
+            {
+                var name=Number(document.getElementById("t1").value);
+                var mobile=Number(document.getElementById("t2").value);
+                var email=document.getElementById("t3").value;
+                var feedback=document.getElementById("t3").value;
+
+                var expName=/^[a-zA-Z]{2,100}$/;
+                var expMobile=/^[6-9][0-9]{9}$/;
+                var expEmail=/^[a-zA-Z0-9-_]+@+$/;
+                var expFeedback=/^[a-zA-Z]{20,200}$/;
+
+
+                if(!(expName.test(name)))
+                {
+                    document.getElementById("t1").focus();
+                    alert("Only Alphabate allowed");
+                }
+                else if(!(expMobile.test(mobile)))
+                {
+                    document.getElementById("t2").focus();
+                    alert("Only 10 digits allowed");
+                }
+                else if(!(expEmail.test(email)))
+                {
+                     document.getElementById("t3").focus();
+                     alert("Invalid mail Address");
+                }
+                else if(!(expFeedback.test(feedback)))
+                {
+                    document.getElementById("t4").focus();
+                    alert("describe more than 20 words");
+                }
+                else
+                {
+                    alert("Form Submit");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Validation</h3>
+        Name : <input type="text" id="t1"/><br><br>
+        Mobile : <input type="text" id="t2"/><br><br>
+        Email : <input type="text" id="t3"/><br><br>
+        Feedback : <textarea id="t4"></textarea><br><br>
+
+        <button onclick="val()">Submit</button>
+    </body>
+</html>

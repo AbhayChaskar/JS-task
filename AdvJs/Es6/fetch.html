@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Fetch Demo</title>
+    </head>
+    <body>
+        <h2 style="text-align: center; color: brown; border: 1px solid">Header Details</h2>
+        <input type="button" value="Click here" onclick="fnc()">
+        <ul id="target">
+        </ul>
+        <script>
+            function fnc()
+            {
+                const URL="https://jsonplaceholder.typicode.com/users";
+                fetch(URL)
+                .then(res=>res.json())
+                .then(data=>{
+                    data.forEach(element=>{
+                        let list=document.createElement("li");
+                        list.innerHTML='<li> ${element.mail} </li>';
+                        document.getElementById("target").appendChild(list);
+                    })
+                })
+            }
+        </script>
+    </body>
+</html>

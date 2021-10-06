@@ -1,0 +1,48 @@
+body
+{
+	margin: 0;
+	padding: 15px;
+	font-family: sans-serif;
+}
+.container
+{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.box
+{
+    border: 1px solid gray;
+    padding: 10px;
+    background: #e1e1e1;
+    color: #332e2e;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.box.active
+{
+    background: #fff;
+}
+.box_label
+{
+    margin: 0;
+    font-size: 30px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+.box_label i
+{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 20px;
+}
+.box_content
+{
+    display: none;
+}
+.box_content p
+{
+    margin-top: 0px;
+    line-height: 1.6;
+} 

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Dom 4 forms element</title>
+        <script>
+            function calc() 
+            {
+                var num1=Number(document.getElementById("t1").value);
+                var num2=Number(document.getElementById("t2").value);
+                var num3=Number(document.getElementById("t3").value);
+                var num4=Number(document.getElementById("t4").value);
+                var num5=Number(document.getElementById("t5").value);
+
+                var total=num1+num2+num3+num4+num5;
+                var prcnt=total/5;
+                document.getElementById("result1").value=total;
+                document.getElementById("result2").value=prcnt; 
+                if(prcnt>80)
+                    document.getElementById("result3").value="A";
+                else if(prcnt>60 && prcnt<80)
+                    document.getElementById("result3").value="B";
+                else if(prcnt>45 && prcnt<60)
+                    document.getElementById("result3").value="C";
+                else
+                    document.getElementById("result3").value="Fail";
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Marksheet</h3>
+        English <input type="text" id="t1"/><br><br>
+        Hindi <input type="text" id="t2"/><br><br>
+        Science <input type="text" id="t3"/><br><br>
+        SST <input type="text" id="t4"/><br><br>
+        Maths <input type="text" id="t5"/><br><br>
+        Total : <input type="text" id="result1" readonly/><br><br>
+        Percentage : <input type="text" id="result2" readonly/><br><br>
+        Grade : <input type="text" id="result3" readonly/><br><br>
+
+        <button onclick="calc()">Submit</button>
+    </body>
+</html>

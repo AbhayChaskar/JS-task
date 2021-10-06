@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Dom 7 change bg image</title>
+        <script>
+            var interval=setInterval(changeimage, 3500)
+            var count=0;
+
+            function changeimage() 
+            {
+                if(count==0)
+                {
+                    document.getElementById("img").setAttribute('src',"Images/city2.jpg");
+                }
+                else if(count==1)
+                {
+                    document.getElementById("img").setAttribute('src',"Images/fb.png");
+                }
+                else if(count==2)
+                {
+                    document.getElementById("img").setAttribute('src',"Images/twit.jpg");
+                }
+                else if(count==3)
+                {
+                    document.getElementById("img").setAttribute('src',"Images/wiki.jpg");
+                }
+                else if(count==4)
+                {
+                    document.getElementById("img").setAttribute('src',"Images/facebook.png");
+                }
+                count++;
+                if(count==5)
+                {
+                    count=0;
+                }   
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Bg Image</h3>
+        <img src="Images/city1.jpg" id="img">
+    </body>
+</html>

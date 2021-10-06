@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom 1 get images</title>
+        <script>
+            function fnc()
+            {
+                //access para
+                var elem=document.getElementById("tar");
+                //set in para
+                elem.innerHTML="<h4> Inner HTML Content</h4>"
+                //change src img tag
+                document.getElementById("im").src="Images/city1.jpg"
+
+                elem.style.color="white";
+                elem.style.border="1px solid red";
+                elem.style.background="black";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="tar"></p>
+        <img src="Images/city2.jpg" id="im"/><br>
+        <button onclick="fnc()">Click</button>
+    </body>
+</html>

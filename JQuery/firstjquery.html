@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="styledemo.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>  </head>
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+     <title>Jquery Marksheet</title>
+     <script>
+         $(document).ready(function ()
+         {
+             $('#check').click(function ()
+             {
+                 var a=$("#english").val();
+                 var b=$("#hindi").val();
+                 var c=$("#maths").val();
+                 var d=$("#science").val();
+                 var e=$("#sst").val();
+                 var Total = Number(a)+Number(b)+Number(c)+Number(d)+Number(e);
+                 var Percentage = Number(Total)/5;
+
+            if(percentage>80)
+            {
+                var Grade = "A";
+            }
+            else if(percentage>60 && percentage<80)
+            {
+                var Grade = "B";
+            }
+            else if(percentage>45 && percentage<60)
+            {
+                var Grade = "C";
+            }
+            else
+            {
+                var Grade = "F";
+            }
+
+            $("#Total").val(Total);
+            $("#Percentage").val(Percentage);
+            $("#Grade").val(Grade);
+            })
+         });
+     </script>
+</head>
+<body>
+    <form>
+        <h2>Marksheet</h2>
+        English <input type="text" id="t1"/><br><br>
+        Hindi <input type="text" id="t2"/><br><br>
+        Science <input type="text" id="t3"/><br><br>
+        SST <input type="text" id="t4"/><br><br>
+        Maths <input type="text" id="t5"/><br><br>
+        Total : <input type="text" id="result1" readonly/><br><br>
+        Percentage : <input type="text" id="result2" readonly/><br><br>
+        Grade : <input type="text" id="result3" readonly/><br><br>
+
+        <button onclick="check()">Submit</button>
+    </form>
+</body>
+</html>

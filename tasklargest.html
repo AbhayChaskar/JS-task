@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display,sum,largest</title>
+        <script>
+            var array1=[10,20,30,40,50,60,70,80,90,100];
+            var find=70;
+            var sum=0;
+            var large=0;
+            document.write("Display Array: ");
+            for(i=0;i<array1.length;i++)
+            {
+                document.write(array1[i]+" ")
+                sum=sum+array1[i];
+
+                if(array1[i]>=large)
+                {
+                    large=array1[i];
+                }
+            }
+            document.write("<br> sum of array is: "+sum)
+            document.write("<br> Largest number in array is: "+large)
+        </script>
+    </head>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marksheet</title>
+        <script>
+            var sub1=parseInt(prompt("Enter Subject 1 Marks"));
+            var sub2=parseInt(prompt("Enter Subject 2 Marks"));
+            var sub3=parseInt(prompt("Enter Subject 3 Marks"));
+            var sub4=parseInt(prompt("Enter Subject 4 Marks"));
+            var sub5=parseInt(prompt("Enter Subject 5 Marks"));
+            
+            var total=sub1+sub2+sub3+sub4+sub5;
+            
+            var percentage=total/5;
+
+            alert("Total Marks Obtained: "+total)
+            alert("Percentage: "+percentage+"%") 
+            if(percentage>80)
+            {
+               alert("your grade is A")
+            }
+            else if(percentage>60 && percentage<80)
+            {
+                alert("your grade is B")
+            }
+            else if(percentage>45 && percentage<60)
+            {
+                alert("your grade is C")
+            }
+            else
+            {
+                alert("You'r Fail :(")
+            }
+            document.write("Total is "+total)
+            document.write("Percentage is "+percentage+"%")
+            document.write("Grade is "+grade)
+        </script>
+    </head>
+</html>
